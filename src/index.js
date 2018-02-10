@@ -6,15 +6,15 @@ import axios from 'axios'
 const Card = (props) => {
 	return(
   <div style={{margin: '1em'}}>
-  	<img width="75" src={props.avatar_url} alt="git img"/>
+  	<img width="75" src={props.avatar_url} alt="git img" />
     <div style={{display: 'inline-block', marginLeft: '10'}}>
     	<div style={{fontSize: '1.25em', fontWeight: 'bold'}}>
-      {props.name}
+      	{props.name}
       </div>  
       <div>  
         {props.company}
-        </div>  
-  </div>
+			</div>  
+  	</div>
   </div>
         )
 }
@@ -97,8 +97,6 @@ class App extends React.Component{
 	};
   
   addNewDetails = (cardInfo, repoInfo) =>{
-    console.log(cardInfo);
-    console.log(repoInfo)
     this.setState(prevState => ({
     cards: prevState.cards.concat(cardInfo),
     repos: prevState.repos.concat(repoInfo),
@@ -121,24 +119,3 @@ class App extends React.Component{
 ReactDOM.render(<App /> , document.getElementById('root'))
 
 
-// {name: "1r0nF1st",
-//               	avatar_url: "https://avatars0.githubusercontent.com/u/26969889?v=4",
-//               	company: "1r0nF1st"
-//               },
-//               {name: "jodyjamesw",
-//               	avatar_url: "https://avatars3.githubusercontent.com/u/16133660?v=4",
-//               	company: "1r0nF1st"
-//               }
-
-// const Repo = (props) =>{
-// 	return (<div>
-//       Full Name: {props.full_name}
-//     </div>)
-// }
-
-// const RepoList = (props) =>{
-// 	return(<div>
-// 		{props.cards.map(repo => <Repo {...repo}/>)}
-//    </div>
-//    )
-// }
